@@ -12,7 +12,7 @@ game.ReplicatedStorage.Viewmodels["v_Decoy Grenade"].HumanoidRootPart.Transparen
 game.ReplicatedStorage.Viewmodels["v_C4Halloween"].HumanoidRootPart.Transparency = 1
 ----------------------------------------------------------------------------------------
 
-if game.CoreGui:FindFirstChild("pepsi") then
+if game.CoreGui:FindFirstChild("bloxfunprem") then
     game.CoreGui.pepsi:Destroy()
 end
 local cbClient = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
@@ -34,7 +34,7 @@ function l:CreateUI()
         makefolder("pepsi")
     end
     local m = Instance.new("ScreenGui")
-    m.Name = "pepsi.club"
+    m.Name = "bloxfunprem"
     local n = Instance.new("Frame")
     n.Name = "main"
     n.Size = UDim2.new(0, 320, 0, 308)
@@ -69,7 +69,7 @@ function l:CreateUI()
     q.Parent = n
     local r = Instance.new("TextLabel")
     r.Name = "name"
-    r.Text = "pepsi.club"
+    r.Text = "bloxfunprem"
     r.TextColor3 = Color3.new(1, 1, 1)
     r.Size = UDim2.new(1, 0, 0, 20)
     r.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
@@ -930,7 +930,7 @@ a.InputBegan:connect(function(w)
                                     aQ.Color = Color3.new(0.2, 0.9, 0.2)
                                     wait()
                                     game.StarterGui:SetCore("SendNotification", {
-                                    Title = "pepsi.club";
+                                    Title = "bloxfunprem";
                                     Text = "edgebugged !";
                                     Icon = "rbxassetid://6910419016";
                                     Duration = 3;
@@ -1673,7 +1673,7 @@ aE:CreateToggle("Watermark", function(K)
         Text.Size = UDim2.new(0.373076916, 0, 1, 0)
         Text.ZIndex = 4
         Text.Font = Enum.Font.Code
-        Text.Text = "pepsi.club!"
+        Text.Text = "bloxfunprem!"
         Text.TextColor3 = Color3.fromRGB(65025, 65025, 65025)
         Text.TextSize = 14.000
         Text.TextStrokeTransparency = 0.000
