@@ -12,7 +12,7 @@ game.ReplicatedStorage.Viewmodels["v_Decoy Grenade"].HumanoidRootPart.Transparen
 game.ReplicatedStorage.Viewmodels["v_C4Halloween"].HumanoidRootPart.Transparency = 1
 ----------------------------------------------------------------------------------------
 
-if game.CoreGui:FindFirstChild("bloxfunprem") then
+if game.CoreGui:FindFirstChild("pepsi") then
     game.CoreGui.pepsi:Destroy()
 end
 local cbClient = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
@@ -34,7 +34,7 @@ function l:CreateUI()
         makefolder("pepsi")
     end
     local m = Instance.new("ScreenGui")
-    m.Name = "bloxfunprem"
+    m.Name = "pepsi.club"
     local n = Instance.new("Frame")
     n.Name = "main"
     n.Size = UDim2.new(0, 320, 0, 308)
@@ -69,7 +69,7 @@ function l:CreateUI()
     q.Parent = n
     local r = Instance.new("TextLabel")
     r.Name = "name"
-    r.Text = "bloxfunprem"
+    r.Text = "pepsi.club"
     r.TextColor3 = Color3.new(1, 1, 1)
     r.Size = UDim2.new(1, 0, 0, 20)
     r.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
@@ -930,7 +930,7 @@ a.InputBegan:connect(function(w)
                                     aQ.Color = Color3.new(0.2, 0.9, 0.2)
                                     wait()
                                     game.StarterGui:SetCore("SendNotification", {
-                                    Title = "bloxfunprem";
+                                    Title = "pepsi.club";
                                     Text = "edgebugged !";
                                     Icon = "rbxassetid://6910419016";
                                     Duration = 3;
@@ -1673,7 +1673,7 @@ aE:CreateToggle("Watermark", function(K)
         Text.Size = UDim2.new(0.373076916, 0, 1, 0)
         Text.ZIndex = 4
         Text.Font = Enum.Font.Code
-        Text.Text = "bloxfunprem!"
+        Text.Text = "pepsi.club!"
         Text.TextColor3 = Color3.fromRGB(65025, 65025, 65025)
         Text.TextSize = 14.000
         Text.TextStrokeTransparency = 0.000
@@ -2224,26 +2224,6 @@ game:GetService("RunService").Stepped:connect(
                 game.Players.LocalPlayer.PlayerGui.GUI.SuitZoom.BackgroundTransparency = 1
             end)
         end)
-            if k["KillAll"] and LocalPlayer.Character:FindFirstChild("UpperTorso") and LocalPlayer.Character:FindFirstChild("Gun") then
-                for _,Player in pairs(Players:GetPlayers()) do
-                    for _,Player in pairs(Players:GetPlayers()) do
-                        local oh1 = Player.Character.Head
-                        local oh2 = Player.Character.Head.CFrame.p
-                        local oh3 = LocalPlayer.gun.Name
-                        local oh4 = 4096
-                        local oh5 = LocalPlayer.Character.Gun
-                        local oh6 = ""
-                        local oh7 = ""
-                        local oh8 = 15
-                        local oh9 = false
-                        local oh10 = false
-                        local oh11 = Vector3.new(0,0,0)
-                        local oh12 = 16868
-                        local oh13 = Vector3.new(0, 0, 0)
-                        game:GetService("ReplicatedStorage").Events.HitPart:FireServer(oh1, oh2, oh3, oh4, oh5, oh6, oh7, oh8, oh9, oh10, oh11, oh12, oh13)
-                end
-        end
-end
 
 -- btracers Settings
 local Other = {
