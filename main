@@ -1383,13 +1383,13 @@ aD:CreateLabel("Sounds")
 local ebsfx = Instance.new("Sound")
 ebsfx.Parent = game:GetService("SoundService")
 
-ebSoundsDropdown = aD:CreateDropdown("EB Sound", {"Ownage", "Godlike", "Skeet"}, function(K)
+ebSoundsDropdown = aD:CreateDropdown("EB Sound", {"Ownage", "Godlike", "neverlose"}, function(K)
     if K == "Ownage" then
         ebsfx.SoundId = 'rbxassetid://6887181639'
     elseif K == "Godlike" then
         ebsfx.SoundId = 'rbxassetid://7463103082'
-    elseif K == "Skeet" then
-        ebsfx.SoundId = 'rbxassetid://5447626464'
+    elseif K == "neverlose" then
+        ebsfx.SoundId = 'rbxassetid://7847403797'
     end
 end)
 
@@ -2390,7 +2390,7 @@ aE:CreateToggle("Hit Sound", function(K)
 				spawn(function()
 					local hitsound = Instance.new("Sound")
 					hitsound.Parent = game:GetService("SoundService")
-					hitsound.SoundId = "rbxassetid://6607339542"
+					hitsound.SoundId = "rbxassetid://7847403797"
 					hitsound.Volume = 5
 					hitsound:Play()
 				end)
