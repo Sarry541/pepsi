@@ -5,8 +5,8 @@ for i,v in pairs(game.ReplicatedStorage.Viewmodels:GetChildren()) do
     end
 end
 ----------------------------------------------------------------------------------------
-if game.CoreGui:FindFirstChild("bloxfunprem") then
-    game.CoreGui["bloxfunprem"]:Destroy()
+if game.CoreGui:FindFirstChild("bloxfanprem") then
+    game.CoreGui["bloxfanprem"]:Destroy()
 end
 local cbClient = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
 local a = game:GetService("UserInputService")
@@ -23,12 +23,12 @@ local k = {}
 local l = {Scrolling = false, options = {}}
 
 function l:CreateUI()
-    if not isfolder("bloxfunprem") then
-        makefolder("bloxfunprem")
+    if not isfolder("bloxfanprem") then
+        makefolder("bloxfanprem")
     end
     local m = Instance.new("ScreenGui")
-    m.Name = "bloxfunprem"
-    local n = Instance.new("Frame")
+    m.Name = "bloxfanprem"
+    local n = Instance.new("ImageLabel")
     n.Name = "main"
     n.Size = UDim2.new(0, 320, 0, 365)
     n.Position = UDim2.new(0.5, -160, 0.5, -154)
@@ -36,6 +36,8 @@ function l:CreateUI()
     n.BorderSizePixel = 0
     n.ZIndex = 0
     n.Parent = m
+    n.Image = "rbxassetid://6073763717"
+    n.ImageColor3 = Color3.fromRGB(49, 49, 49)
     local o = Instance.new("Frame")
     o.Name = "back"
     o.Size = UDim2.new(1, 10, 1, 10)
@@ -62,7 +64,7 @@ function l:CreateUI()
     q.Parent = n
     local r = Instance.new("TextLabel")
     r.Name = "name"
-    r.Text = "bloxfunprem"
+    r.Text = "bloxfanprem"
     r.TextColor3 = Color3.new(1, 1, 1)
     r.Size = UDim2.new(1, 0, 0, 20)
     r.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
@@ -125,14 +127,14 @@ function l:CreateUI()
         z.ZIndex = 3
         z.Text = y
         z.Parent = s
-         z.MouseEnter:Connect(function()
-              z.TextSize = 14 
-              z.TextColor3 = Color3.fromRGB(248, 98, 31)
-    	    end)
-    	     z.MouseLeave:Connect(function()
-    		  z.TextSize = 13
-    		  z.TextColor3 = Color3.new(1, 1, 1)
-    	     end)
+        z.MouseEnter:Connect(function()
+            z.TextSize = 14 
+            z.TextColor3 = Color3.fromRGB(255, 0, 0)
+        end)
+        z.MouseLeave:Connect(function()
+            z.TextSize = 13
+            z.TextColor3 = Color3.new(1, 1, 1)
+        end)
         local A = Instance.new("Frame")
         A.Name = y .. "tab"
         A.Size = UDim2.new(0.95, 0, 0.975, 0)
@@ -168,12 +170,12 @@ function l:CreateUI()
             I.BorderSizePixel = 1
             I.BorderColor3 = Color3.new()
             I.Parent = H
-             I.MouseEnter:Connect(function()
-              I.BorderColor3 = Color3.fromRGB(248, 98, 31)  
-    	    end)
-    	     I.MouseLeave:Connect(function()
-    		  I.BorderColor3 = Color3.new()
-    	     end)
+            I.MouseEnter:Connect(function()
+                I.BorderColor3 = Color3.fromRGB(255, 0, 0)
+            end)
+            I.MouseLeave:Connect(function()
+                I.BorderColor3 = Color3.new()
+            end)
             local J = Instance.new("TextLabel")
             J.Text = y
             J.BackgroundTransparency = 1
@@ -183,17 +185,17 @@ function l:CreateUI()
             J.Position = UDim2.new(1, 10, 0, 0)
             J.Parent = I
             J.Size = UDim2.new(0, J.TextBounds.X, 1, 0)
-             J.MouseEnter:Connect(function()
-              I.BorderColor3 = Color3.fromRGB(248, 98, 31)  
-    	    end)
-    	     J.MouseLeave:Connect(function()
-    		  I.BorderColor3 = Color3.new()
-    	     end)
+            J.MouseEnter:Connect(function()
+                I.BorderColor3 = Color3.fromRGB(255, 0, 0)  
+            end)
+            J.MouseLeave:Connect(function()
+                I.BorderColor3 = Color3.new()
+            end)
             H.Size = UDim2.new(0, 22 + J.TextBounds.X, 0, 12)
             local function K()
                 G = not G
                 F(G)
-                I.BackgroundColor3 = G and Color3.fromRGB(248, 98, 31) or Color3.fromRGB(17, 17, 17)
+                I.BackgroundColor3 = G and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(17, 17, 17)
             end
             H.MouseButton1Click:connect(K)
             local L = {toggleFunction = K, Name = y, Type = "Toggle"}
@@ -228,16 +230,16 @@ function l:CreateUI()
             R.AutoButtonColor = false
             R.Text = ""
             R.Parent = A
-             R.MouseEnter:Connect(function()
-              R.BorderColor3 = Color3.fromRGB(248, 98, 31)  
-    	    end)
-    	     R.MouseLeave:Connect(function()
-    		  R.BorderColor3 = Color3.new()
-    	     end)
+            R.MouseEnter:Connect(function()
+                R.BorderColor3 = Color3.fromRGB(255, 0, 0)  
+            end)
+            R.MouseLeave:Connect(function()
+                R.BorderColor3 = Color3.new()
+            end)
             local S = Instance.new("Frame")
             S.Name = "fill"
             S.Size = UDim2.new(0, 1, 1, 0)
-            S.BackgroundColor3 = Color3.fromRGB(248, 98, 31)
+            S.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
             S.BorderSizePixel = 0
             S.Parent = R
             local T = Instance.new("TextLabel")
@@ -331,12 +333,12 @@ function l:CreateUI()
             a1.TextSize = 11
             a1.ZIndex = 99
             a1.Parent = A
-             a1.MouseEnter:Connect(function()
-              a1.BorderColor3 = Color3.fromRGB(248, 98, 31)  
-    	    end)
-    	     a1.MouseLeave:Connect(function()
-    		  a1.BorderColor3 = Color3.new()
-    	     end)
+            a1.MouseEnter:Connect(function()
+                a1.BorderColor3 = Color3.fromRGB(255, 0, 0)  
+            end)
+            a1.MouseLeave:Connect(function()
+                a1.BorderColor3 = Color3.new()
+            end)
             local a2 = Instance.new("Frame")
             a2.Name = "list"
             a2.Size = UDim2.new(1, 0, 0, 0)
@@ -368,7 +370,7 @@ function l:CreateUI()
                     end
                 end
                 if G then
-                    local a5, a6 = string.gsub(W, "bloxfunprem\\", "")
+                    local a5, a6 = string.gsub(W, "bloxfanprem\\", "")
                     a1.Text = a5
                     _(W)
                 end
@@ -382,7 +384,7 @@ function l:CreateUI()
                 a2.BorderSizePixel = #W >= 1 and 1 or 0
                 a2.Size = UDim2.new(1, 0, 0, #W * 13)
                 for B, C in next, W do
-                    local a5, a6 = string.gsub(C, "bloxfunprem\\", "")
+                    local a5, a6 = string.gsub(C, "bloxfanprem\\", "")
                     local a8 = Instance.new("TextButton")
                     a8.Name = C
                     a8.Size = UDim2.new(0, 100, 0, 12)
@@ -395,14 +397,14 @@ function l:CreateUI()
                     a8.TextWrapped = true
                     a8.Parent = a2
                     a8.ZIndex = 100
-                     a8.MouseEnter:Connect(function()
-                      a8.TextSize = 12 
-                      a8.TextColor3 = Color3.fromRGB(248, 98, 31)
-            	    end)
-            	     a8.MouseLeave:Connect(function()
-            		  a8.TextSize = 11
-            		  a8.TextColor3 = Color3.fromRGB(255, 255, 255)
-            	     end)
+                    a8.MouseEnter:Connect(function()
+                        a8.TextSize = 12 
+                        a8.TextColor3 = Color3.fromRGB(255, 0, 0)
+                    end)
+                    a8.MouseLeave:Connect(function()
+                        a8.TextSize = 11
+                        a8.TextColor3 = Color3.fromRGB(255, 255, 255)
+                    end)
                     a8.MouseButton1Click:connect(
                         function()
                             a2.Visible = false
@@ -436,12 +438,12 @@ function l:CreateUI()
             ab.TextSize = 11
             ab.ZIndex = 0
             ab.Parent = A
-                         ab.MouseEnter:Connect(function()
-              ab.BorderColor3 = Color3.fromRGB(248, 98, 31)  
-    	    end)
-    	     ab.MouseLeave:Connect(function()
-    		  ab.BorderColor3 = Color3.new()
-    	     end)
+            ab.MouseEnter:Connect(function()
+                ab.BorderColor3 = Color3.fromRGB(255, 0, 0)  
+            end)
+            ab.MouseLeave:Connect(function()
+                ab.BorderColor3 = Color3.new()
+            end)
             local ac = Instance.new("TextLabel")
             ac.Text = y
             ac.BackgroundTransparency = 1
@@ -505,7 +507,7 @@ function l:CreateUI()
             ah.Size = UDim2.new(0, ah.TextBounds.X, 1, 0)
             ah.MouseEnter:Connect(function()
                 ah.TextSize = 14 
-                ah.TextColor3 = Color3.fromRGB(248, 98, 31)
+                ah.TextColor3 = Color3.fromRGB(255, 0, 0)
             end)
             ah.MouseLeave:Connect(function()
                 ah.TextSize = 13
@@ -527,18 +529,19 @@ function l:CreateUI()
             aj.ZIndex = 0
             aj.Parent = A
             aj.MouseButton1Click:connect(ai)
-             aj.MouseEnter:Connect(function()
-              aj.BorderColor3 = Color3.fromRGB(248, 98, 31)  
-    	    end)
-    	aj.MouseLeave:Connect(function()
-    		aj.BorderColor3 = Color3.fromRGB(29, 29, 29)  
-    	    end)
+            aj.MouseEnter:Connect(function()
+                aj.BorderColor3 = Color3.fromRGB(255, 0, 0)  
+            end)
+            aj.MouseLeave:Connect(function()
+                aj.BorderColor3 = Color3.fromRGB(29, 29, 29)  
+            end)
         end
         return E
     end
     m.Parent = game.CoreGui
     return x
 end
+
 function getNearest()
     local ak = math.huge
     local al = nil
@@ -572,7 +575,7 @@ function chams(aq)
                         ar.Visible = true
                         ar.Parent = ap
                         ar.Adornee = C
-                        ar.Color3 = Color3.fromRGB(248, 98, 31)
+                        ar.Color3 = Color3.fromRGB(255, 0, 0)
                         if aq.Character:FindFirstChild("HumanoidRootPart") then
                             aq.Character.HumanoidRootPart.AncestryChanged:connect(
                                 function()
@@ -658,7 +661,7 @@ function chams(aq)
                         ar.Visible = true
                         ar.Parent = ap
                         ar.Adornee = C
-                        ar.Color3 = Color3.fromRGB(248, 98, 31)
+                        ar.Color3 = Color3.fromRGB(255, 0, 0)
                         if aq.Character:FindFirstChild("HumanoidRootPart") then
                             aq.Character.HumanoidRootPart.AncestryChanged:connect(
                                 function()
@@ -1025,6 +1028,14 @@ Skyboxes = {
         ["SkyboxRt"] = "rbxassetid://159454300",
         ["SkyboxUp"] = "rbxassetid://159454288"
     },
+    ["Red Night"] = {
+        ["SkyboxBk"] = "rbxassetid://401664839",
+        ["SkyboxDn"] = "rbxassetid://401664862",
+        ["SkyboxFt"] = "rbxassetid://401664960",
+        ["SkyboxLf"] = "rbxassetid://401664881",
+        ["SkyboxRt"] = "rbxassetid://401664901",
+        ["SkyboxUp"] = "rbxassetid://401664936"
+    },
     ["Dusty Clouds"] = {
         ["SkyboxBk"] = "rbxassetid://252760981",
         ["SkyboxDn"] = "rbxassetid://252763035",
@@ -1220,7 +1231,7 @@ skyboxEnabled = aC:CreateToggle("Custom skybox", function(K)
     k["Custom skybox"] = K
 end)
 
-skyboxSelected = aC:CreateDropdown("Selected skybox", {"Night Sky", "Purple Nebula", "Pink Daylight", "Dusty Clouds"}, function(bI)
+skyboxSelected = aC:CreateDropdown("Selected skybox", {"Night Sky", "Purple Nebula", "Pink Daylight", "Dusty Clouds", "Red Night"}, function(bI)
     k["Selected skybox"] = bI
     spawn(
         function()
@@ -1383,13 +1394,15 @@ aD:CreateLabel("Sounds")
 local ebsfx = Instance.new("Sound")
 ebsfx.Parent = game:GetService("SoundService")
 
-ebSoundsDropdown = aD:CreateDropdown("EB Sound", {"Ownage", "Godlike", "neverlose"}, function(K)
+ebSoundsDropdown = aD:CreateDropdown("EB Sound", {"Ownage", "Godlike", "Skeet", "Wow"}, function(K)
     if K == "Ownage" then
         ebsfx.SoundId = 'rbxassetid://6887181639'
     elseif K == "Godlike" then
         ebsfx.SoundId = 'rbxassetid://7463103082'
-    elseif K == "neverlose" then
-        ebsfx.SoundId = 'rbxassetid://7847403797'
+    elseif K == "Skeet" then
+        ebsfx.SoundId = 'rbxassetid://5447626464'
+    elseif K == "Wow" then
+        ebsfx.SoundId = 'rbxassetid://7872233648'
     end
 end)
 
@@ -1463,7 +1476,7 @@ a.InputBegan:connect(function(w)
                                     aQ.Color = Color3.new(0.2, 0.9, 0.2)
                                     wait()
                                     game.StarterGui:SetCore("SendNotification", {
-                                    Title = "bloxfunprem";
+                                    Title = "bloxfanprem";
                                     Text = "edgebugged !";
                                     Icon = "rbxassetid://6910419016";
                                     Duration = 3;
@@ -1475,6 +1488,14 @@ a.InputBegan:connect(function(w)
                                         g.Character.HumanoidRootPart.Velocity.X * aS.Edgebug.XZModifier,
                                         g.Character.HumanoidRootPart.Velocity.Y * aS.Edgebug.YModifier,
                                         g.Character.HumanoidRootPart.Velocity.Z * aS.Edgebug.XZModifier
+                                    )
+                                    getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Main.Chats.DisplayChat).moveOldMessages()
+                                    getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Main.Chats.DisplayChat).createNewMessage(
+                                        "bloxfanprem",
+                                        "edgebugged",
+                                        Color3.fromRGB(255,0,0), 
+                                        Color3.new(1,1,1),
+                                        .01
                                     )
                                     local b2 = g.Character.HumanoidRootPart.Velocity
                                     pcall(
@@ -1567,153 +1588,166 @@ end)
 keystrokesButton = aD:CreateToggle("Keystrokes", function(K)
     if K == true then
         local ScreenGui = Instance.new("ScreenGui")
+        local Frame = Instance.new("Frame")
         local W = Instance.new("TextLabel")
-        local A = Instance.new("TextLabel")
         local S = Instance.new("TextLabel")
+        local A = Instance.new("TextLabel")
         local D = Instance.new("TextLabel")
         local E = Instance.new("TextLabel")
         local R = Instance.new("TextLabel")
         local Space = Instance.new("TextLabel")
-
+        
         ScreenGui.Parent = game.CoreGui
         ScreenGui.Name = "keystrokess"
-
+        
+        Frame.Parent = game.CoreGui.keystrokess
+        Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Frame.BackgroundTransparency = 1.000
+        Frame.Position = UDim2.new(0.453987718, 0, 0.738977075, 0)
+        Frame.Size = UDim2.new(0, 72, 0, 75)
+        
         W.Name = "W"
-        W.Parent = ScreenGui
+        W.Parent = Frame
         W.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         W.BackgroundTransparency = 1.000
-        W.Position = UDim2.new(0.488053292, 0, 0.728395104, 0)
+        W.Position = UDim2.new(0.287764132, 0, -0.0102292299, 0)
         W.Size = UDim2.new(0, 29, 0, 28)
-        W.Visible = false
         W.Font = Enum.Font.Code
-        W.Text = "W"
+        W.Text = "_"
         W.TextColor3 = Color3.fromRGB(255, 255, 255)
         W.TextSize = 14.000
         W.TextStrokeTransparency = 0.000
-
-        A.Name = "A"
-        A.Parent = ScreenGui
-        A.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        A.BackgroundTransparency = 1.000
-        A.Position = UDim2.new(0.453584045, 0, 0.777777791, 0)
-        A.Size = UDim2.new(0, 29, 0, 28)
-        A.Visible = false
-        A.Font = Enum.Font.Code
-        A.Text = "A"
-        A.TextColor3 = Color3.fromRGB(255, 255, 255)
-        A.TextSize = 14.000
-        A.TextStrokeTransparency = 0.000
-
+        
         S.Name = "S"
-        S.Parent = ScreenGui
+        S.Parent = Frame
         S.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         S.BackgroundTransparency = 1.000
-        S.Position = UDim2.new(0.488053292, 0, 0.777777791, 0)
+        S.Position = UDim2.new(0.287764132, 0, 0.35915342, 0)
         S.Size = UDim2.new(0, 29, 0, 28)
-        S.Visible = false
         S.Font = Enum.Font.Code
-        S.Text = "S"
+        S.Text = "_"
         S.TextColor3 = Color3.fromRGB(255, 255, 255)
         S.TextSize = 14.000
         S.TextStrokeTransparency = 0.000
-
+        
+        A.Name = "A"
+        A.Parent = Frame
+        A.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        A.BackgroundTransparency = 1.000
+        A.Position = UDim2.new(-0.0950409099, 0, 0.35915345, 0)
+        A.Size = UDim2.new(0, 29, 0, 28)
+        A.Font = Enum.Font.Code
+        A.Text = "_"
+        A.TextColor3 = Color3.fromRGB(255, 255, 255)
+        A.TextSize = 14.000
+        A.TextStrokeTransparency = 0.000
+        
         D.Name = "D"
-        D.Parent = ScreenGui
+        D.Parent = Frame
         D.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         D.BackgroundTransparency = 1.000
-        D.Position = UDim2.new(0.522522688, 0, 0.777777791, 0)
+        D.Position = UDim2.new(0.684458077, 0, 0.35915342, 0)
         D.Size = UDim2.new(0, 29, 0, 28)
-        D.Visible = false
         D.Font = Enum.Font.Code
-        D.Text = "D"
+        D.Text = "_"
         D.TextColor3 = Color3.fromRGB(255, 255, 255)
         D.TextSize = 14.000
         D.TextStrokeTransparency = 0.000
-
+        
         E.Name = "E"
-        E.Parent = ScreenGui
+        E.Parent = Frame
         E.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         E.BackgroundTransparency = 1.000
-        E.Position = UDim2.new(0.453584045, 0, 0.728395045, 0)
+        E.Position = UDim2.new(-0.0950409099, 0, -0.0102293491, 0)
         E.Size = UDim2.new(0, 29, 0, 28)
-        E.Visible = false
         E.Font = Enum.Font.Code
-        E.Text = "E"
+        E.Text = "_"
         E.TextColor3 = Color3.fromRGB(255, 255, 255)
         E.TextSize = 14.000
         E.TextStrokeTransparency = 0.000
-
+        
         R.Name = "R"
-        R.Parent = ScreenGui
+        R.Parent = Frame
         R.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         R.BackgroundTransparency = 1.000
-        R.Position = UDim2.new(0.522522688, 0, 0.728395045, 0)
+        R.Position = UDim2.new(0.683231115, 0, -0.0102292895, 0)
         R.Size = UDim2.new(0, 29, 0, 28)
-        R.Visible = false
         R.Font = Enum.Font.Code
-        R.Text = "R"
+        R.Text = "_"
         R.TextColor3 = Color3.fromRGB(255, 255, 255)
         R.TextSize = 14.000
         R.TextStrokeTransparency = 0.000
-
+        
         Space.Name = "Space"
-        Space.Parent = ScreenGui
+        Space.Parent = Frame
         Space.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Space.BackgroundTransparency = 1.000
-        Space.Position = UDim2.new(0.470035285, 0, 0.825396895, 0)
+        Space.Position = UDim2.new(-0.104209319, 0, 0.620387971, 0)
         Space.Size = UDim2.new(0, 87, 0, 28)
-        Space.Visible = false
         Space.Font = Enum.Font.Code
-        Space.Text = "Space"
+        Space.Text = "_"
         Space.TextColor3 = Color3.fromRGB(255, 255, 255)
         Space.TextSize = 14.000
         Space.TextStrokeTransparency = 0.000
-
-        local UserInputService = game:GetService("UserInputService")
-
-        local W1Key = Enum.KeyCode.W
-        local A1Key = Enum.KeyCode.A
-        local S1Key = Enum.KeyCode.S
-        local D1Key = Enum.KeyCode.D
-        local E1Key = Enum.KeyCode.E
-        local R1Key = Enum.KeyCode.R
-        local SpaceKey = Enum.KeyCode.Space
-
-        UserInputService.InputBegan:Connect(function(input)
-            if (input.KeyCode == W1Key) then
-                W.Visible = true
-            elseif (input.KeyCode == A1Key) then
-                A.Visible = true
-            elseif (input.KeyCode == S1Key) then
-                S.Visible = true
-            elseif (input.KeyCode == D1Key) then
-                D.Visible = true
-            elseif (input.KeyCode == E1Key) then
-                E.Visible = true
-            elseif (input.KeyCode == R1Key) then
-                R.Visible = true
-            elseif (input.KeyCode == SpaceKey) then
-                Space.Visible = true
-            end
-        end)
-
-        UserInputService.InputEnded:Connect(function(input)
-            if (input.KeyCode == W1Key) then
-                W.Visible = false
-            elseif (input.KeyCode == A1Key) then
-                A.Visible = false
-            elseif (input.KeyCode == S1Key) then
-                S.Visible = false
-            elseif (input.KeyCode == D1Key) then
-                D.Visible = false
-            elseif (input.KeyCode == E1Key) then
-                E.Visible = false
-            elseif (input.KeyCode == R1Key) then
-                R.Visible = false
-            elseif (input.KeyCode == SpaceKey) then
-                Space.Visible = false
-            end
-        end)
+        
+        -- Scripts:
+        
+        local function SJBA_fake_script() -- Frame.LocalScript 
+            local script = Instance.new('LocalScript', Frame)
+            local gui = script.Parent
+            gui.Draggable = true
+            gui.Active = true
+        end
+        coroutine.wrap(SJBA_fake_script)()
+        
+        local function UTCCBQ_fake_script() -- Frame.LocalScript 
+            local script = Instance.new('LocalScript', Frame)
+            local UIS = game:GetService("UserInputService")
+            local Sp = script.Parent.Space
+            local W = script.Parent.W
+            local A = script.Parent.A
+            local S = script.Parent.S
+            local D = script.Parent.D
+            local E = script.Parent.E
+            local R = script.Parent.R
+        	
+            UIS.InputBegan:Connect(function(key)
+                if key.KeyCode == Enum.KeyCode.W then
+                    W.Text = "W"
+                elseif key.KeyCode == Enum.KeyCode.A then
+                    A.Text = "A"
+                elseif key.KeyCode == Enum.KeyCode.S then
+                    S.Text = "S"
+                elseif key.KeyCode == Enum.KeyCode.D then
+                    D.Text = "D"
+                elseif key.KeyCode == Enum.KeyCode.E then
+                    E.Text = "E"
+                elseif key.KeyCode == Enum.KeyCode.R then
+                    R.Text = "R"
+                elseif key.KeyCode == Enum.KeyCode.Space then
+                    Sp.Text = "Space"
+                end
+            end)
+            
+            UIS.InputEnded:Connect(function(key)
+                if key.KeyCode == Enum.KeyCode.W then
+                    W.Text = "_"
+                elseif key.KeyCode == Enum.KeyCode.A then
+                    A.Text = "_"
+                elseif key.KeyCode == Enum.KeyCode.S then
+                    S.Text = "_"
+                elseif key.KeyCode == Enum.KeyCode.D then
+                    D.Text = "_"
+                elseif key.KeyCode == Enum.KeyCode.E then
+                    E.Text = "_"
+                elseif key.KeyCode == Enum.KeyCode.R then
+                    R.Text = "_"
+                elseif key.KeyCode == Enum.KeyCode.Space then
+                    Sp.Text = "_"
+                end
+            end)
+        end
+    coroutine.wrap(UTCCBQ_fake_script)()
     
     elseif K == false then
         game.CoreGui.keystrokess:Destroy()
@@ -1891,7 +1925,7 @@ saveConfig = aF:CreateButton("Save config", function()
         end
         writefile(k.Config, c:JSONEncode(bM))
     end
-    l.options.Config.updateList(listfiles("blox"))
+    l.options.Config.updateList(listfiles("pepsi"))
 end)
 
 loadConfig = aF:CreateButton("Load config", function()
@@ -1910,11 +1944,11 @@ loadConfig = aF:CreateButton("Load config", function()
             end
         end
     end
-    l.options.Config.updateList(listfiles("blox"))
+    l.options.Config.updateList(listfiles("pepsi"))
 end)
 
 refreshConfigs = aF:CreateButton("Refresh configs", function()
-    l.options.Config.updateList(listfiles("blox"))
+    l.options.Config.updateList(listfiles("pepsi"))
 end)
 
 ------------------------------------ MISC ------------------------------------
@@ -1945,7 +1979,7 @@ aE:CreateToggle("Watermark", function(K)
 
         Color.Name = "Color"
         Color.Parent = ScreenLabel
-        Color.BackgroundColor3 = Color3.fromRGB(248, 98, 31)
+        Color.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
         Color.BorderSizePixel = 0
         Color.Size = UDim2.new(1.25, 0, 0, 2)
         Color.ZIndex = 2
@@ -1972,7 +2006,7 @@ aE:CreateToggle("Watermark", function(K)
         Text.Size = UDim2.new(1, 0, 1, 0)
         Text.ZIndex = 4
         Text.Font = Enum.Font.RobotoMono
-        Text.Text = "bloxfunprem | 00:00:00  | Oct. 17, 2021"
+        Text.Text = "bloxfanprem | 00:00:00  | Oct. 17, 2021"
         Text.TextColor3 = Color3.fromRGB(65025, 65025, 65025)
         Text.TextSize = 14.000
         Text.TextStrokeTransparency = 0.000
@@ -2029,7 +2063,7 @@ aE:CreateToggle("Watermark", function(K)
                 if h > 12 then
                     h = h - 12
                 end
-                script.Parent.Text = "bloxfunprem | " ..h.. ":" ..m.. ":" ..s.. " " ..mo.. " | " ..mon[mont][1].. " " ..d.. ", " ..y
+                script.Parent.Text = "bloxfanprem | " ..h.. ":" ..m.. ":" ..s.. " " ..mo.. " | " ..mon[mont][1].. " " ..d.. ", " ..y
             end
         end
 
@@ -2119,7 +2153,7 @@ aE:CreateToggle("Spectator List", function(K)
 
         Color.Name = "Color"
         Color.Parent = Spectators
-        Color.BackgroundColor3 = Color3.fromRGB(248, 98, 31)
+        Color.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
         Color.BorderSizePixel = 0
         Color.Size = UDim2.new(1, 0, 0, 2)
         Color.ZIndex = 2
@@ -2320,14 +2354,6 @@ if K == true then
     end
 end)
 
-uncensorChat = aE:CreateToggle("Uncensor Chat", function(K)
-    if K == true then
-        NoChatFilterEnabled = true
-    elseif K == false then
-        NoChatFilterEnabled = false
-    end
-end)
-
 aE:CreateButton("Remove Textures", function()
     workspace:FindFirstChildOfClass('Terrain').WaterWaveSize = 0
     workspace:FindFirstChildOfClass('Terrain').WaterWaveSpeed = 0
@@ -2390,7 +2416,7 @@ aE:CreateToggle("Hit Sound", function(K)
 				spawn(function()
 					local hitsound = Instance.new("Sound")
 					hitsound.Parent = game:GetService("SoundService")
-					hitsound.SoundId = "rbxassetid://7847403797"
+					hitsound.SoundId = "rbxassetid://6607339542"
 					hitsound.Volume = 5
 					hitsound:Play()
 				end)
@@ -2493,30 +2519,118 @@ aH:CreateLabel("More coming soon.")
 ------------------------------------ SKINS ------------------------------------
 aG:CreateLabel("Knives")
 
-M9Toggle = aG:CreateToggle("M9 Bayonet", function(K)
-    k["M9 Bayonet"] = K
-    aS.M9.Enabled = K
-    spawn(
-        function()
-            while aS.M9.Enabled do
-                d.RenderStepped:Wait()
-                pcall(
-                    function()
-                        if
-                            g.Character and g.Character:FindFirstChild("EquippedTool") and
-                                game.ReplicatedStorage.Weapons:FindFirstChild(g.Character.EquippedTool.Value):FindFirstChild(
-                                    "Melee"
-                                ) and
-                                workspace.Camera:FindFirstChild("Arms") and
-                                workspace.Camera.Arms:FindFirstChild("Handle2")
-                        then
-                            workspace.Camera.Arms.Handle.MeshId = "rbxassetid://5524010796"
-                            workspace.Camera.Arms.Handle.TextureID = "rbxassetid://5521767392"
-                        end
-                    end)
-                end
-        end)
+meleeDropdown = aG:CreateDropdown("Custom Melee", {"Shadow Daggers", "Talon", "$19 Fortnite Card", "RemRem", "Skeleton", "Bowie", "Diamond Pickaxe", "Classic"}, function(K)
+    if K == "Shadow Daggers" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/shadowdaggers", true))()
+    elseif K == "Talon" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/talon", true))()
+    elseif K == "$19 Fortnite Card" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/fortnitecard", true))()
+    elseif K == "RemRem" then
+        loadstring(game:HttpGet("https://pastebin.com/raw/0V9dNtNM", true))()
+    elseif K == "Skeleton" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/skeleton", true))()
+    elseif K == "Bowie" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/bowie", true))()
+    elseif K == "Diamond Pickaxe" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/diamondpickaxe", true))()
+    elseif K == "Classic" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/classic", true))()
+    end
 end)
+
+m9Dropdown = aG:CreateDropdown("M9 Bayonet Skin", {"Vanilla", "Lore", "GammaDoppler2", "GammaDoppler4", "Fade", "Sapphire", "Ruby", "Crimson Web", "Lighting Strike"}, function(K)
+    if K == "Vanilla" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355243957"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355243957"
+    elseif K == "Lore" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355247035"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355247035"
+    elseif K == "GammaDoppler2" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://7891965871"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://7891965871"
+    elseif K == "GammaDoppler4" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://7891968316"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://7891968316"
+    elseif K == "Fade" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355237475"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355237475"
+    elseif K == "Sapphire" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355236981"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355236981"
+    elseif K == "Ruby" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355236588"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355236588"
+    elseif K == "Crimson Web" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355235916"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355235916"
+    elseif K == "Lighting Strike" then
+        game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
+        game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
+        game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355234343"
+        game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355234343"
+    end
+end)
+
+otherDropdown = aG:CreateDropdown("Other", {"Reset Viewmodels", "Unlock Inv"}, function(K)
+    if K == "Reset Viewmodels" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/resetviewmodels", true))()
+    elseif K == "Unlock Inv" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/6segs/millionware/main/inv", true))()
+    end
+end)
+
+--[[
+    M9Toggle = aG:CreateToggle("M9 Bayonet", function(K)
+        k["M9 Bayonet"] = K
+        aS.M9.Enabled = K
+        spawn(
+            function()
+                while aS.M9.Enabled do
+                    d.RenderStepped:Wait()
+                    pcall(
+                        function()
+                            if
+                                g.Character and g.Character:FindFirstChild("EquippedTool") and
+                                    game.ReplicatedStorage.Weapons:FindFirstChild(g.Character.EquippedTool.Value):FindFirstChild(
+                                        "Melee"
+                                    ) and
+                                    workspace.Camera:FindFirstChild("Arms") and
+                                    workspace.Camera.Arms:FindFirstChild("Handle2")
+                                then
+                                    workspace.Camera.Arms.Handle.MeshId = "rbxassetid://5524010796"
+                                    workspace.Camera.Arms.Handle.TextureID = "rbxassetid://5521767392"
+                                end
+                        end)
+                    end
+            end)
+    end)
+--]]
 
 unlockInv = aG:CreateButton("Bayonet", function()
     local bK = "v_Bayonet"
@@ -2535,58 +2649,136 @@ unlockInv = aG:CreateButton("Bayonet", function()
     bh.Parent = game.ReplicatedStorage.Viewmodels
 end)
 
-Daggers = aG:CreateButton("Shadow Daggers", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/shadowdaggers", true))()
-end)
-
-Talon = aG:CreateButton("Talon Knife", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/talon", true))()
-end)
-
-Fortnite = aG:CreateButton("$19 Fortnite Card", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/fortnitecard", true))()
-end)
-
-nsfwRem = aG:CreateButton("RemRem Knife", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/0V9dNtNM", true))()
-end)
-
-Skeleton = aG:CreateButton("Skeleton Knife", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/skeleton", true))()
-end)
-
-bowie = aG:CreateButton("Bowie", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/bowie", true))()
-end)
-
-pickaxe = aG:CreateButton("Diamond Pickaxe", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/diamondpickaxe", true))()
-end)
-
-Classic = aG:CreateButton("Classic Knife", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/classic", true))()
-end)
-
-resetViewmodels = aG:CreateButton("Reset Viewmodels", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/resetviewmodels", true))()
-end)
-
-unlockinventory = aG:CreateButton("Unlock Inventory", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/6segs/millionware/main/inv", true))()
-end)
-
 aG:CreateLabel("Arms")
 
-anarchia = aG:CreateButton("Anarchia", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/anarchiaarms", true))()
+armsDropdown = aG:CreateDropdown("Arms", {"Anarchia", "Snake", "Steve"}, function(K)
+    if K == "Anarchia" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/anarchiaarms", true))()
+    elseif K == "Snake" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/snakearms", true))()
+    elseif K == "Steve" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/stevearms", true))()
+    end
 end)
 
-snake = aG:CreateButton("Snake", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/snakearms", true))()
+removeSleeves = aG:CreateToggle("Remove Sleeves", function(K)
+    if K == true then
+		game.ReplicatedStorage.Viewmodels.GIGNArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GIGNArms["Right Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.SASArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.SASArms["Right Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.IDFArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.IDFArms["Right Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.UTArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.UTArms["Right Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.BDSArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.BDSArms["Right Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GSGArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GSGArms["Right Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.SPArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.SPArms["Right Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.WDArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.WDArms["Right Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.AAArms["Left Arm"].Sleeve.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.AAArms["Right Arm"].Sleeve.Transparency = 1
+	elseif K == false then
+		game.ReplicatedStorage.Viewmodels.GIGNArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GIGNArms["Right Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.SASArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.SASArms["Right Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.IDFArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.IDFArms["Right Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.UTArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.UTArms["Right Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.BDSArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.BDSArms["Right Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GSGArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GSGArms["Right Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.SPArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.SPArms["Right Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.WDArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.WDArms["Right Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.AAArms["Left Arm"].Sleeve.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.AAArms["Right Arm"].Sleeve.Transparency = 0
+	end
 end)
 
-steve = aG:CreateButton("Steve", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/deaddigi/pepsi.club/main/skins/stevearms", true))()
+removeGloves = aG:CreateToggle("Remove Gloves", function(K)
+	if K == true then
+		game.ReplicatedStorage.Viewmodels.ECArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.ECArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GIGNArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GIGNArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.SASArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.SASArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.IDFArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.IDFArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.UTArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.UTArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GCTArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GCTArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.PCArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.PCArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.BDSArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.BDSArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GSGArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GSGArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.SPArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.SPArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.WDArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.WDArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GTArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.GTArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.PTArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.PTArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.AAArms["Left Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Viewmodels.AAArms["Right Arm"].Glove.Transparency = 1
+		game.ReplicatedStorage.Gloves.Models["Sports Glove"].LGlove.Transparency = 1
+		game.ReplicatedStorage.Gloves.Models["Sports Glove"].RGlove.Transparency = 1
+		game.ReplicatedStorage.Gloves.Models["Handwraps"].LGlove.Transparency = 1
+		game.ReplicatedStorage.Gloves.Models["Handwraps"].RGlove.Transparency = 1
+		game.ReplicatedStorage.Gloves.Models["Fingerless Glove"].LGlove.Transparency = 1
+		game.ReplicatedStorage.Gloves.Models["Fingerless Glove"].RGlove.Transparency = 1
+		game.ReplicatedStorage.Gloves.Models["Strapped Glove"].LGlove.Transparency = 1
+		game.ReplicatedStorage.Gloves.Models["Strapped Glove"].RGlove.Transparency = 1
+	elseif K == false then
+		game.ReplicatedStorage.Viewmodels.ECArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.ECArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GIGNArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GIGNArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.SASArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.SASArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.IDFArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.IDFArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.UTArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.UTArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GCTArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GCTArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.PCArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.PCArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.BDSArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.BDSArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GSGArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GSGArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.SPArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.SPArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.WDArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.WDArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GTArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.GTArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.PTArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.PTArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.AAArms["Left Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Viewmodels.AAArms["Right Arm"].Glove.Transparency = 0
+		game.ReplicatedStorage.Gloves.Models["Sports Glove"].LGlove.Transparency = 0
+		game.ReplicatedStorage.Gloves.Models["Sports Glove"].RGlove.Transparency = 0
+		game.ReplicatedStorage.Gloves.Models["Handwraps"].LGlove.Transparency = 0
+		game.ReplicatedStorage.Gloves.Models["Handwraps"].RGlove.Transparency = 0
+		game.ReplicatedStorage.Gloves.Models["Fingerless Glove"].LGlove.Transparency = 0
+		game.ReplicatedStorage.Gloves.Models["Fingerless Glove"].RGlove.Transparency = 0
+		game.ReplicatedStorage.Gloves.Models["Strapped Glove"].LGlove.Transparency = 0
+		game.ReplicatedStorage.Gloves.Models["Strapped Glove"].RGlove.Transparency = 0
+	end
 end)
 
 aG:CreateLabel("Custom Skin")
