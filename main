@@ -5,8 +5,8 @@ for i,v in pairs(game.ReplicatedStorage.Viewmodels:GetChildren()) do
     end
 end
 ----------------------------------------------------------------------------------------
-if game.CoreGui:FindFirstChild("bloxfanprem") then
-    game.CoreGui["bloxfanprem"]:Destroy()
+if game.CoreGui:FindFirstChild("bloxfunprem") then
+    game.CoreGui["bloxfunprem"]:Destroy()
 end
 local cbClient = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
 local a = game:GetService("UserInputService")
@@ -23,11 +23,11 @@ local k = {}
 local l = {Scrolling = false, options = {}}
 
 function l:CreateUI()
-    if not isfolder("bloxfanprem") then
-        makefolder("bloxfanprem")
+    if not isfolder("bloxfunprem") then
+        makefolder("bloxfunprem")
     end
     local m = Instance.new("ScreenGui")
-    m.Name = "bloxfanprem"
+    m.Name = "bloxfunprem"
     local n = Instance.new("ImageLabel")
     n.Name = "main"
     n.Size = UDim2.new(0, 320, 0, 365)
@@ -64,7 +64,7 @@ function l:CreateUI()
     q.Parent = n
     local r = Instance.new("TextLabel")
     r.Name = "name"
-    r.Text = "bloxfanprem"
+    r.Text = "bloxfunprem"
     r.TextColor3 = Color3.new(1, 1, 1)
     r.Size = UDim2.new(1, 0, 0, 20)
     r.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
@@ -370,7 +370,7 @@ function l:CreateUI()
                     end
                 end
                 if G then
-                    local a5, a6 = string.gsub(W, "bloxfanprem\\", "")
+                    local a5, a6 = string.gsub(W, "bloxfunprem\\", "")
                     a1.Text = a5
                     _(W)
                 end
@@ -384,7 +384,7 @@ function l:CreateUI()
                 a2.BorderSizePixel = #W >= 1 and 1 or 0
                 a2.Size = UDim2.new(1, 0, 0, #W * 13)
                 for B, C in next, W do
-                    local a5, a6 = string.gsub(C, "bloxfanprem\\", "")
+                    local a5, a6 = string.gsub(C, "bloxfunprem\\", "")
                     local a8 = Instance.new("TextButton")
                     a8.Name = C
                     a8.Size = UDim2.new(0, 100, 0, 12)
@@ -1408,7 +1408,7 @@ end)
 
 aD:CreateLabel("Keybinds")
 
-EdgebugKeybind = aD:CreateKeybind("Edgejump Keybind", Enum.KeyCode.LeftAlt, function(w)
+EdgejumpKeybind = aD:CreateKeybind("Edgejump Keybind", Enum.KeyCode.LeftAlt, function(w)
     k["Edgejump Keybind"] = tostring(w)
     aS.Edgejump.Keybind = tostring(w)
     aS.Edgejump.Held = false
@@ -1475,12 +1475,6 @@ a.InputBegan:connect(function(w)
                                 if g.Character.HumanoidRootPart.Position.Y - 3.49 <= b0.Y + 2.5 then
                                     aQ.Color = Color3.new(0.2, 0.9, 0.2)
                                     wait()
-                                    game.StarterGui:SetCore("SendNotification", {
-                                    Title = "bloxfanprem";
-                                    Text = "edgebugged !";
-                                    Icon = "rbxassetid://6910419016";
-                                    Duration = 3;
-                                    })
                                     ebsfx.Volume = 2
                                     ebsfx:Play()
                                     g.Character.HumanoidRootPart.Velocity =
@@ -1491,7 +1485,7 @@ a.InputBegan:connect(function(w)
                                     )
                                     getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Main.Chats.DisplayChat).moveOldMessages()
                                     getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Main.Chats.DisplayChat).createNewMessage(
-                                        "bloxfanprem",
+                                        "bloxfunprem",
                                         "edgebugged",
                                         Color3.fromRGB(255,0,0), 
                                         Color3.new(1,1,1),
@@ -2006,7 +2000,7 @@ aE:CreateToggle("Watermark", function(K)
         Text.Size = UDim2.new(1, 0, 1, 0)
         Text.ZIndex = 4
         Text.Font = Enum.Font.RobotoMono
-        Text.Text = "bloxfanprem | 00:00:00  | Oct. 17, 2021"
+        Text.Text = "bloxfunprem | 00:00:00  | Oct. 17, 2021"
         Text.TextColor3 = Color3.fromRGB(65025, 65025, 65025)
         Text.TextSize = 14.000
         Text.TextStrokeTransparency = 0.000
@@ -2063,7 +2057,7 @@ aE:CreateToggle("Watermark", function(K)
                 if h > 12 then
                     h = h - 12
                 end
-                script.Parent.Text = "bloxfanprem | " ..h.. ":" ..m.. ":" ..s.. " " ..mo.. " | " ..mon[mont][1].. " " ..d.. ", " ..y
+                script.Parent.Text = "bloxfunprem | " ..h.. ":" ..m.. ":" ..s.. " " ..mo.. " | " ..mon[mont][1].. " " ..d.. ", " ..y
             end
         end
 
@@ -2541,54 +2535,63 @@ end)
 
 m9Dropdown = aG:CreateDropdown("M9 Bayonet Skin", {"Vanilla", "Lore", "GammaDoppler2", "GammaDoppler4", "Fade", "Sapphire", "Ruby", "Crimson Web", "Lighting Strike"}, function(K)
     if K == "Vanilla" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355243957"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355243957"
     elseif K == "Lore" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355247035"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355247035"
     elseif K == "GammaDoppler2" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://7891965871"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://7891965871"
     elseif K == "GammaDoppler4" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://7891968316"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://7891968316"
     elseif K == "Fade" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355237475"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355237475"
     elseif K == "Sapphire" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355236981"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355236981"
     elseif K == "Ruby" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355236588"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355236588"
     elseif K == "Crimson Web" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].WorldModel.Main.Value = "rbxassetid://6355235916"
         game.ReplicatedStorage.Skins["Bayonet"]["Splattered"].Handle.Value = "rbxassetid://6355235916"
     elseif K == "Lighting Strike" then
+        print("EQUIP THE BAYONET SPLATTERED TO MAKE THIS WORK!!!!!!!!!")
         game.ReplicatedStorage.Weapons.Bayonet.Model.Handle.MeshId = "rbxassetid://6473522916"
         game.ReplicatedStorage.Viewmodels["v_Bayonet"].Handle.MeshId = "rbxassetid://6473522916"
         game.Players.LocalPlayer.PlayerGui.Client.Images["Bayonet"]["Splattered"].Value = "rbxassetid://7874426119"
